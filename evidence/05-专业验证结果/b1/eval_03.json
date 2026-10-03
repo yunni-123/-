@@ -1,0 +1,13 @@
+{
+ "eval": "eval_03",
+ "variant": "illcond-solve--numerical_instability",
+ "reproducible": false,
+ "root_cause": "未知（无根因能力）",
+ "confidence": null,
+ "elapsed_s": 0.1,
+ "raw": {
+  "exit_code": 1,
+  "stdout_tail": "cond(A) = 1.526e+10\nrelative_residual = 8.228e-10\nsolution_error = 1.194e+00\n",
+  "stderr_tail": "Traceback (most recent call last):\n  File \"/root/repro-agent-bench/eval/eval_03/main.py\", line 51, in <module>\n    main()\n    ~~~~^^\n  File \"/root/repro-agent-bench/eval/eval_03/main.py\", line 45, in main\n    assert res < 1e-12, \"relative residual too large: numerical instability\"\n           ^^^^^^^^^^^\nAssertionError: relative residual too large: numerical instability\n"
+ }
+}

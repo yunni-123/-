@@ -1,0 +1,11 @@
+{
+ "eval": "eval_05",
+ "variant": "illcond-solve--silent_truncation",
+ "root_cause": "静默截断",
+ "reproducible": false,
+ "confidence": 0.98,
+ "reason": "build_matrix 中矩阵切片 [: N // 2, :] 将行截断为 4 行，与断言要求的 (N, N) 形状矛盾，触发静默截断异常。",
+ "elapsed_s": 1.3,
+ "parse_error": false,
+ "error": null
+}

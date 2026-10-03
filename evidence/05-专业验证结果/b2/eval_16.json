@@ -1,0 +1,11 @@
+{
+ "eval": "eval_16",
+ "variant": "units-pipeline--dep_typo",
+ "root_cause": "可复现（无缺陷）",
+ "reproducible": true,
+ "confidence": 1.0,
+ "reason": "代码逻辑正确，单位换算准确，且运行结果验证了输出在合理范围内，符合预期。",
+ "elapsed_s": 1.5,
+ "parse_error": false,
+ "error": null
+}

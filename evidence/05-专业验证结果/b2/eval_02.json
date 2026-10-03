@@ -1,0 +1,11 @@
+{
+ "eval": "eval_02",
+ "variant": "illcond-solve--env_cuda",
+ "root_cause": "环境不匹配",
+ "reproducible": false,
+ "confidence": 0.95,
+ "reason": "脚本在模块导入阶段强制要求 CUDA/GPU 后端（cupy），但当前运行环境无 GPU 且未安装 cupy，导致立即抛出 RuntimeError 而非执行后续的病态矩阵求解逻辑。",
+ "elapsed_s": 1.6,
+ "parse_error": false,
+ "error": null
+}

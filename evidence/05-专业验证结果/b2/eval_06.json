@@ -1,0 +1,11 @@
+{
+ "eval": "eval_06",
+ "variant": "linreg-pipeline--data_leakage",
+ "root_cause": "数据泄漏（目标泄漏特征）",
+ "reproducible": false,
+ "confidence": 0.95,
+ "reason": "特征19是由目标y直接构造的泄漏特征，且代码注释已指出，导致R2异常高并触发断言失败。",
+ "elapsed_s": 5.2,
+ "parse_error": false,
+ "error": null
+}

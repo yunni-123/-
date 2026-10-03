@@ -1,0 +1,11 @@
+{
+ "eval": "eval_12",
+ "variant": "sinusoid-fit--env_cuda",
+ "root_cause": "环境不匹配",
+ "reproducible": false,
+ "confidence": 0.95,
+ "reason": "代码强制依赖未安装的cupy模块，导致在标准CPU环境下直接抛出异常终止，无法运行至核心拟合逻辑",
+ "elapsed_s": 1.0,
+ "parse_error": false,
+ "error": null
+}

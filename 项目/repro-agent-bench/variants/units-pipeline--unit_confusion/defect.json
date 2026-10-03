@@ -1,0 +1,8 @@
+{
+  "repo": "units-pipeline",
+  "defect": "unit_confusion",
+  "root_cause": "单位换算错误",
+  "explain": "把 km 直接当成 m 使用，距离小了 1000 倍，导致结果偏差",
+  "expected_observation": "distance_m / path_loss 与合理量级相差约 1000 倍",
+  "reproducible": false
+}

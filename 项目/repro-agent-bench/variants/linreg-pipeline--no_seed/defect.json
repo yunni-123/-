@@ -1,0 +1,8 @@
+{
+  "repo": "linreg-pipeline",
+  "defect": "no_seed",
+  "root_cause": "随机性未固定",
+  "explain": "移除了随机种子，导致每次运行结果不同（不可复现）",
+  "expected_observation": "多次运行同一仓库，关键输出数值不稳定",
+  "reproducible": false
+}

@@ -1,0 +1,11 @@
+{
+ "eval": "eval_13",
+ "variant": "sinusoid-fit--no_seed",
+ "root_cause": "随机性未固定",
+ "reproducible": false,
+ "confidence": 1.0,
+ "reason": "代码中生成随机数的部分未固定随机种子，导致每次运行结果不同，不可复现。",
+ "elapsed_s": 1.4,
+ "parse_error": false,
+ "error": null
+}

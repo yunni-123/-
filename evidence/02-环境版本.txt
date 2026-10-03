@@ -1,0 +1,68 @@
+# 环境版本记录（AGH 运行环境）
+
+> 生成时间：2026-10-02（UTC+8）
+> 用途：赛事提交材料「时间与版本记录」+ evidence/02
+
+## 1. 运行平台
+| 项 | 值 |
+|---|---|
+| 宿主系统 | Windows（Dell） |
+| AGH 运行环境 | **WSL2 Ubuntu 24.04**（已选 WSL2，非 Windows 原生） |
+| WSL 虚拟磁盘位置 | `D:\wsl\Ubuntu\ext4.vhdx`（**全部数据在 D 盘，未占用 C 盘**） |
+| Linux 发行版 | Ubuntu（WSL2） |
+
+## 2. 工具链
+| 工具 | 版本 | 安装位置 |
+|---|---|---|
+| Node.js | **v24.21.0**（linux-x64） | `/opt/node-v24.21.0-linux-x64`（vhdx 内 = D 盘） |
+| pnpm | **10.34.5**（corepack，与 AGH 根 `packageManager` 一致） | corepack 管理（vhdx 内） |
+| git | 2.53.0 | 系统包 |
+| gcc / build-essential | Ubuntu 15.2.0 | 系统包 |
+| bubblewrap（AGH 命令沙箱依赖） | `/usr/bin/bwrap` | 系统包 |
+| user namespace | max_user_namespaces = 31087（可用） | 内核参数 |
+
+## 3. AGH 源码
+| 项 | 值 |
+|---|---|
+| 仓库 | https://github.com/AgnesAI-Labs/agnes-harness |
+| **commit** | `2ef9b71f36f6af70af405f20f82369c13d91d82e`（2026-10-01 16:17:24 +0800） |
+| 克隆位置 | WSL 内 `/root/agnes-harness`（vhdx 内 = D 盘） |
+| 构建方式 | `corepack pnpm install --frozen-lockfile` + `corepack pnpm --filter @agnes/cli build:local` |
+| 构建输出 | `/root/agnes-harness/packages/cli/dist/local/`（入口 `agnes.mjs`） |
+| 构建结果 | 成功（BUILD_DONE_OK），`node packages/cli/dist/local/agnes.mjs --help` 验证通过 |
+
+## 4. 运行状态
+| 项 | 值 |
+|---|---|
+| Web 工作台 | `node packages/cli/dist/local/agnes.mjs serve` → **http://127.0.0.1:4177/ 返回 HTTP 200**（WSL2 本地回环转发，Windows 侧浏览器可直接访问） |
+| AGH 数据目录 | `~/.agh`（WSL 内，vhdx 内 = D 盘） |
+| 启动脚本 | `agnes-hackathon-2026/serve-agh.sh`（仓库外，便于重启） |
+
+## 5. 复现步骤（给评委的一键说明）
+```bash
+# 在 WSL2 Ubuntu 中
+cd /root/agnes-harness
+corepack pnpm install --frozen-lockfile
+corepack pnpm --filter @agnes/cli build:local
+node packages/cli/dist/local/agnes.mjs serve   # http://127.0.0.1:4177
+```
+
+## 6. 模型接入（已完成）
+| 项 | 值 |
+|---|---|
+| Provider | Agnes AI（AGH 内置目录第 12 项，id `agnes-ai`） |
+| Base URL | `https://api.agnes-ai.cn/v1`（AGH 目录默认值，未覆盖） |
+| 凭据 | 组委会发放 Key（**明文只存于 AGH 本地凭据库 `secret://agnes-ai/default`，即 WSL/D 盘 `~/.agh`，不落 C 盘、不进仓库**） |
+| 可用模型 | 该 Key 仅开放 **`agnes-3.0-flash`**（`GET /v1/models` 实测；`agnes-2.5-flash` 对该 Key 报「该令牌无权访问模型」） |
+| 配置方式 | 非交互驱动官方向导 `agh config`（脚本 `agnes-hackathon-2026/agh-config.mjs`），回执「Configuration saved for new sessions」 |
+| 验证 | `agh doctor provider --probe --json` → status `ok`（models_endpoint / minimal_inference / fields 全过，latency 1157ms）；一次性推理返回正常 |
+| 时间 | 2026-10-02 11:14（UTC+8） |
+
+## 7. 工具调用闭环实测（已完成）
+- 任务：「请只读取当前项目，说明主要目录及用途；不要修改文件或运行安装命令」（AGH 官方首任务）
+- 结果：模型发起 10+ 次 `ls`/`read` 工具调用并正确解析 monorepo 结构，任务完成（退出码 0）
+- 记录导出：`evidence/03-AGH执行记录/工具调用链-session.{html,sharegpt.json}`（sessionId `agnes:local:local-dev:cli:workspace:decaff41923f8b8e`）
+
+## 8. 说明
+- 个人控制台创建的 `sk-` 开头 Key 均被网关判「无效的令牌」（401），不可用；**以组委会发放 Key 为准**。
+- 个人 sk-Key 已在聊天中暴露，建议事后去控制台作废。

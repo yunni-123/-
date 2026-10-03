@@ -1,0 +1,85 @@
+{
+  "id": "agnes:local:local-dev:cli:workspace:decaff41923f8b8e",
+  "conversations": [
+    {
+      "from": "human",
+      "value": "请用一句话介绍你自己"
+    },
+    {
+      "from": "gpt",
+      "value": "我是 Agnes-3.0-flash，一款由 Sapiens AI 开发的通用 AI 助手。"
+    },
+    {
+      "from": "human",
+      "value": "请只读取当前项目，说明主要目录及用途；不要修改文件或运行安装命令"
+    },
+    {
+      "from": "gpt",
+      "value": "```tool_call\n{\"toolUseId\":\"t0-95b8535d77d9732583a152ac9965c349\",\"name\":\"ls\",\"args\":{\"path\":\"<workspace>\"}}\n```"
+    },
+    {
+      "from": "tool",
+      "value": ".gitattributes\n.github/\n.gitignore\n.npmrc\nAGENTS.md\nCLAUDE.md\nCONTRIBUTING.md\nLICENSE\nNOTICE\nREADME.en.md\nREADME.md\nREADME.zh-CN.md\nSECURITY.md\nbiome.json\ndocs/\nexamples/\nnode_modules/\npackage.json\npackages/\npatches/\npnpm-lock.yaml\npnpm-workspace.yaml\nstart-local-windows.ps1\nthird-party/\ntools/\ntsconfig.base.json\ntsconfig.config.json\ntsconfig.json\nvitest.config.ts\nvitest.shared.ts\n[1 entries not listed: denied by policy]"
+    },
+    {
+      "from": "gpt",
+      "value": "\n\n\n\n\n\n\n\n```tool_call\n{\"toolUseId\":\"t1-2bea36cc319e9d8ad77d99caadc26c25\",\"name\":\"ls\",\"args\":{\"path\":\"<workspace>/docs\"}}\n```\n```tool_call\n{\"toolUseId\":\"t2-1ec369527e4f40f14ae062b56d3dcf06\",\"name\":\"ls\",\"args\":{\"path\":\"<workspace>/examples\"}}\n```\n```tool_call\n{\"toolUseId\":\"t3-6f743ca7af71743f97aed48809e62641\",\"name\":\"ls\",\"args\":{\"path\":\"<workspace>/packages\"}}\n```\n```tool_call\n{\"toolUseId\":\"t4-b8cd9a515dae20645101a5caf1c41256\",\"name\":\"ls\",\"args\":{\"path\":\"<workspace>/patches\"}}\n```\n```tool_call\n{\"toolUseId\":\"t5-e6c2e814960ea58b783837553667d5da\",\"name\":\"ls\",\"args\":{\"path\":\"<workspace>/third-party\"}}\n```\n```tool_call\n{\"toolUseId\":\"t6-ab4a26868c6268d1d57ad4416566b5b2\",\"name\":\"ls\",\"args\":{\"path\":\"<workspace>/tools\"}}\n```\n```tool_call\n{\"toolUseId\":\"t7-071f550349a57256a867737a932885e5\",\"name\":\"read\",\"args\":{\"limit\":40,\"path\":\"<workspace>/package.json\"}}\n```\n```tool_call\n{\"toolUseId\":\"t8-35e6bd77ce9b9d1d604b7f21275b6a68\",\"name\":\"read\",\"args\":{\"path\":\"<workspace>/AGENTS.md\"}}\n```"
+    },
+    {
+      "from": "tool",
+      "value": "README.md\nREADME.zh-CN.md\ndevelop/\nguide/\nmaintainers/\nreference/"
+    },
+    {
+      "from": "tool",
+      "value": "packages/\nthird-party-plugin/"
+    },
+    {
+      "from": "tool",
+      "value": "ai/\nbase/\nbridges/\nchannels/\ncli/\ncli-launch/\ncli-tui/\ncode/\ncordis/\ncordis-loader/\ncore/\ncosmokit/\ndaemon/\nerror-sanitization/\nextension-api/\nhost/\nmcp-transport-health/\npackage-admin-client-node/\npackage-isolation/\npackage-manager/\nplugin-runtime/\nprotocol/\nprotocol-validation/\nresource-control-cli/\nresource-control-client-node/\nresource-control-contracts/\nresource-control-daemon/\nresource-control-runtime/\nresource-control-store/\nresource-control-web/\nresource-control-worker/\nruntime-python/\nsandbox-remote/\nsdk/\nsystem-node/\nweb/\nweb-admin-frame/\nweb-client/\nweb-server/\nweb-slots/\nweb-ui/\nweb-units/\nworker-runtime/"
+    },
+    {
+      "from": "tool",
+      "value": "README.md\n[REDACTED:email]"
+    },
+    {
+      "from": "tool",
+      "value": "acceptance/\nbench-cu-artifact-gc.ts\nbench-ledger-integrity.ts\nbench-ledger-scan.ts\nbench-ledger-write.ts\nbench-op-state.ts\nci/\nguards/\npublic-docs/\nsmoke.sh\ntest-fixtures/\ntest-start-local-windows.ps1\nthird-party-notices.d.mts\nthird-party-notices.mjs"
+    },
+    {
+      "from": "tool",
+      "value": "README.md\nbuild-dependencies.json\nruntime-dependencies.json"
+    },
+    {
+      "from": "tool",
+      "value": "1\t# Working on Agnes Harness\n2\t\n3\tRead [README.md](README.md), the [documentation](docs/README.md), and the relevant module before making changes. Development pull requests are currently limited to invited internal collaborators; see [CONTRIBUTING.md](CONTRIBUTING.md).\n4\t\n5\t## Repository map\n6\t\n7\t- `packages/`: protocol, Core, Host, daemon, clients, extensions and supporting libraries.\n8\t- `examples/`: runnable plugin examples and explicit test fixtures.\n9\t- `docs/`: user guides, extension tutorials, architecture and maintenance policies.\n10\t- `tools/`: generation, acceptance checks, documentation verification and repository guards.\n11\t- `third-party/`: dependency provenance; root `NOTICE` and package-local licenses cover attribution.\n12\t\n13\tUse the [source map](docs/develop/source-map.md) to locate the owning module. Preserve package boundaries and consume declared exports. Protocol schemas and generators own generated types and reference documents.\n14\t\n15\t## Workflow\n16\t\n17\t1. Inspect Git status, the configured remotes and recent changes. Preserve other contributors' work; integrate remote changes without rewriting shared history.\n18\t2. For changes to public APIs, architecture, storage or security boundaries, describe the design and compatibility impact before implementation.\n19\t3. Keep changes focused. Update the affected guides, contracts and meaningful tests in the same change.\n20\t4. Run checks appropriate to the affected behavior. Report the commands, results, failures and untested environments accurately.\n21\t5. Review the final diff before committing. Commit, push and publish only within the user's or maintainer's authorization.\n22\t\n23\t## Build and checks\n24\t\n25\tUse the Node.js requirement and pinned pnpm version in `package.json`. From the repository root:\n26\t\n27\t```sh\n28\tpnpm install --frozen-lockfile\n29\tpnpm --filter @agnes/host build:native\n30\tpnpm --filter @agnes/system-node build:native\n31\tpnpm typecheck\n32\tpnpm lint\n33\tpnpm gen:check\n34\tnode tools/public-docs/verify.mjs\n35\tpnpm exec vitest run tools/guards/src --maxWorkers=1\n36\t```\n37\t\n38\tRun affected package tests from the repository root. `pnpm test` runs the fast tier, `pnpm test:heavy` runs the real-process and large-data tests (`*.e2e.test.ts`, `*.slow.test.ts`), and `pnpm test:all` runs both. Run a single file of either tier with `pnpm exec vitest run <file>`. A focused test command must actually execute matching tests. For a complete local runtime, follow the [installation guide](docs/guide/install.md).\n39\t\n40\t## Tests\n41\t\n42\tKeep the suite growing only where behavior grows.\n43\t\n44\t- Prefer extending an existing test over adding a new one. For a bug fix, add the failing case to the nearest existing test (a new row in a parameterized table, or a stronger assertion) so it fails before the fix and passes after it. Add a new test or test file only for behavior no existing test covers.\n45\t- Test observable behavior at the module's contract: inputs, outputs, persisted state, emitted events and errors. Do not pin internal call counts, private helpers, incidental ordering or exact byte layouts unless that layout is itself the contract, such as a wire format, a prompt prefix or the ledger.\n46\t- Delete tests together with the code they cover. When a change makes a test redundant because its assertions are covered elsewhere, remove or merge it in the same change and name the covering test in the commit message.\n47\t- Choose the tier by file name. A test that starts real daemon, worker or CLI processes is `*.e2e.test.ts`; one that builds large ledgers or waits on real timers is `*.slow.test.ts`. Both run in the heavy tier; every other test file runs in the fast tier.\n48\t\n49\t## Engineering boundaries\n50\t\n51\t- Keep session facts and authorization decisions in their owning backend modules; clients render and request operations through supported interfaces.\n52\t- Maintain fail-closed behavior, lifecycle cleanup, cancellation and recovery semantics. Test refusal and failure paths when changing them.\n53\t- External UI libraries belong in `packages/web-ui`; other packages use its exports. Preserve the shared theme tokens, accessibility, CSP and public skin hooks.\n54\t- Keep guards meaningful. Update exact line budgets or fixture allowances only for reviewed changes; do not remove checks to hide a regression.\n55\t- Preserve third-party licenses, copyright notices and source attribution. Update dependency provenance when changing dependencies.\n56\t- Keep credentials, customer data, private traces, machine-specific configuration and internal project records out of the repository. Use isolated homes and synthetic accounts for tests.\n57\t\n58\tRelease requirements are in [release checks](docs/maintainers/release.md); document maintenance is described in [the maintenance guide](docs/maintainers/maintenance.md)."
+    },
+    {
+      "from": "tool",
+      "value": "1\t{\n2\t  \"name\": \"agnes-harness\",\n3\t  \"private\": true,\n4\t  \"type\": \"module\",\n5\t  \"packageManager\": \"pnpm@10.34.5\",\n6\t  \"engines\": {\n7\t    \"node\": \">=24.10\"\n8\t  },\n9\t  \"scripts\": {\n10\t    \"test\": \"vitest run --project fast --maxWorkers=1\",\n11\t    \"test:heavy\": \"vitest run --project heavy --maxWorkers=1\",\n12\t    \"test:all\": \"vitest run --maxWorkers=1\",\n13\t    \"typecheck\": \"tsc -b\",\n14\t    \"lint\": \"biome check .\",\n15\t    \"gen:check\": \"pnpm -r --if-present run gen:check\",\n16\t    \"bench:cu-artifact-gc\": \"tsx tools/bench-cu-artifact-gc.ts\",\n17\t    \"bench:ledger-integrity\": \"tsx tools/bench-ledger-integrity.ts\",\n18\t    \"bench:ledger-scan\": \"tsx tools/bench-ledger-scan.ts\",\n19\t    \"bench:ledger-write\": \"tsx tools/bench-ledger-write.ts\"\n20\t  },\n21\t  \"devDependencies\": {\n22\t    \"@biomejs/biome\": \"2.5.12\",\n23\t    \"@types/node\": \"26.4.1\",\n24\t    \"happy-dom\": \"20.14.3\",\n25\t    \"tsx\": \"4.23.13\",\n26\t    \"typescript\": \"7.0.2\",\n27\t    \"vitest\": \"5.0.0\"\n28\t  },\n29\t  \"license\": \"Apache-2.0\"\n30\t}"
+    },
+    {
+      "from": "gpt",
+      "value": "\n\n\n\n```tool_call\n{\"toolUseId\":\"t9-7b7476a8af0583696fef75cd3ec4e0d9\",\"name\":\"ls\",\"args\":{\"path\":\"<workspace>/docs/guide\"}}\n```\n```tool_call\n{\"toolUseId\":\"t10-cde5904ac603d058273c56c10137126f\",\"name\":\"ls\",\"args\":{\"path\":\"<workspace>/docs/develop\"}}\n```\n```tool_call\n{\"toolUseId\":\"t11-cf1e2dc393870067024167fa6e425cd3\",\"name\":\"ls\",\"args\":{\"path\":\"<workspace>/docs/reference\"}}\n```\n```tool_call\n{\"toolUseId\":\"t12-d1933b3855055651dd6aa3f51d34ecb7\",\"name\":\"ls\",\"args\":{\"path\":\"<workspace>/docs/maintainers\"}}\n```"
+    },
+    {
+      "from": "tool",
+      "value": "architecture.md\narchitecture.zh-CN.md\nbackend.md\nbackend.zh-CN.md\ncontributing.md\ncontributing.zh-CN.md\nfrontend.md\nfrontend.zh-CN.md\nfullstack.md\nfullstack.zh-CN.md\nplugins.md\nplugins.zh-CN.md\nskins.md\nskins.zh-CN.md\nsource-map.md\nsource-map.zh-CN.md"
+    },
+    {
+      "from": "tool",
+      "value": "build-recovery.md\nbuild-recovery.zh-CN.md\ncli.md\ncli.zh-CN.md\ndemo.md\ndemo.zh-CN.md\ninstall.md\ninstall.zh-CN.md\nmcp.md\nmcp.zh-CN.md\nmhs.md\nmhs.zh-CN.md\npackages.md\npackages.zh-CN.md\nquickstart.md\nquickstart.zh-CN.md\nsecurity.md\nsecurity.zh-CN.md\nsessions.md\nsessions.zh-CN.md\nskills.md\nskills.zh-CN.md\ntroubleshooting.md\ntroubleshooting.zh-CN.md\nweb.md\nweb.zh-CN.md\nwhy-agh.md\nwhy-agh.zh-CN.md"
+    },
+    {
+      "from": "tool",
+      "value": "api.md\napi.zh-CN.md\ncapabilities.md\ncapabilities.zh-CN.md\ncli.md\ncli.zh-CN.md\nconfiguration.md\nconfiguration.zh-CN.md\nlimitations.md\nlimitations.zh-CN.md"
+    },
+    {
+      "from": "tool",
+      "value": "maintenance.md\nmaintenance.zh-CN.md\nprovenance.md\nprovenance.zh-CN.md\nrelease.md\nrelease.zh-CN.md\nverification.md\nverification.zh-CN.md\nversioning.md\nversioning.zh-CN.md"
+    },
+    {
+      "from": "gpt",
+      "value": "这是一个**基于 pnpm 工作区的 TypeScript monorepo**，当前目录下的主要组成与用途如下：\n\n## 主要目录\n\n- **`packages/`** — 核心代码包（monorepo 主体），包括 `ai`、`base`、`bridges`、`channels`、`cli`、`cli-tui`、`code`、`core`、`daemon`、`extension-api`、`host`、`mcp-transport-health`、`plugin-runtime`、`protocol`、`resource-control-*`、`sdk`、`web`、`web-ui`、`worker-runtime` 等。\n- **`examples/`** — 可运行的插件示例与测试夹具。\n- **`docs/`** — 用户指南（guide）、开发文档（develop）、API 参考（reference）和面向维护者的文档（maintainers），中英文成对存放。\n- **`tools/`** — 仓库级工具脚本：性能基准测试（`bench-*.ts`）、CI 检查、公共文档校验、第三方声明生成等。\n- **`third-party/`** — 依赖来源（provenance）与第三方许可/声明文件。\n- **`patches/`** — pnpm 补丁（含 `jiti@2.7.0` 补丁）。\n- **`node_modules/`** — 已安装的依赖（未列出，因策略限制不展开）。\n\n## 根目录其他文件\n\n- `package.json` — 工作区配置，使用 pnpm 10.34.5，要求 Node ≥ 24.10。\n- `pnpm-workspace.yaml` — pnpm 工作区定义。\n- `tsconfig.*.json` — TypeScript 配置。\n- `biome.json` / `vitest.*.ts` — 代码检查与测试配置。\n- `AGENTS.md` / `CLAUDE.md` / `CONTRIBUTING.md` — 贡献者/开发者指南。\n- `NOTICE` / `LICENSE` / `SECURITY.md` — 许可与安全声明。"
+    }
+  ]
+}

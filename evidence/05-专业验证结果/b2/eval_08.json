@@ -1,0 +1,11 @@
+{
+ "eval": "eval_08",
+ "variant": "linreg-pipeline--env_cuda",
+ "root_cause": "环境不匹配",
+ "reproducible": false,
+ "confidence": 0.99,
+ "reason": "运行环境缺失GPU/CUDA支持（cupy模块不可用），导致脚本在导入阶段直接抛出RuntimeError而未能执行核心逻辑。",
+ "elapsed_s": 1.6,
+ "parse_error": false,
+ "error": null
+}

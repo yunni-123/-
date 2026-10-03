@@ -1,0 +1,11 @@
+{
+ "eval": "eval_17",
+ "variant": "units-pipeline--env_cuda",
+ "root_cause": "环境不匹配",
+ "reproducible": false,
+ "confidence": 0.9,
+ "reason": "代码强制依赖 Cupy/GPU 环境，在无 GPU 或无 Cupy 的环境下直接报错退出，无法复现预期计算结果。",
+ "elapsed_s": 2.3,
+ "parse_error": false,
+ "error": null
+}

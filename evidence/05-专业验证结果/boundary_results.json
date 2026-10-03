@@ -1,0 +1,182 @@
+[
+ {
+  "case": "empty_repo",
+  "path": "/root/repro-agent-bench/boundary/empty_repo",
+  "inspect_repo": {
+   "ok": true,
+   "repo_path": "/root/repro-agent-bench/boundary/empty_repo",
+   "files": [],
+   "entry": null,
+   "requirements": [],
+   "target_outputs": [],
+   "in_bench": false,
+   "bench_info": null,
+   "expected_key_values": null,
+   "note": "expected_key_values 来自同仓 pristine 基线（论文宣称的期望结果），供 compare_numbers 比对；pristine 自身该字段即自身期望。工具不提供期望根因标签——根因须由你基于证据推理。"
+  },
+  "build_env": {
+   "ok": true,
+   "requirements": [],
+   "all_resolvable": true,
+   "note": "无 requirements.txt"
+  },
+  "run_repo": {
+   "ok": false,
+   "error": "未找到 main.py"
+  },
+  "diagnose_missing_evidence": {
+   "ok": false,
+   "root_cause": "未知",
+   "confidence": 0.0,
+   "reported_as_unknown": true,
+   "error": "证据不完整，缺少: build_env, run, compare",
+   "fix_suggestion": "请依次补齐 build_env / run / compare 三类证据后再调用 diagnose；证据缺失时不得判定为『可复现』。",
+   "evidence_points": []
+  },
+  "diagnose_clean_evidence": {
+   "ok": true,
+   "root_cause": "可复现（无缺陷）",
+   "confidence": 0.9,
+   "reported_as_unknown": false,
+   "fix_suggestion": "无需修复；建议保留本次观测作为基线",
+   "evidence_points": [
+    "环境可解析、运行一致且成功、数值在容差内"
+   ]
+  }
+ },
+ {
+  "case": "missing_requirements",
+  "path": "/root/repro-agent-bench/boundary/missing_requirements",
+  "inspect_repo": {
+   "ok": true,
+   "repo_path": "/root/repro-agent-bench/boundary/missing_requirements",
+   "files": [
+    "main.py"
+   ],
+   "entry": "main.py",
+   "requirements": [],
+   "target_outputs": [],
+   "in_bench": false,
+   "bench_info": null,
+   "expected_key_values": null,
+   "note": "expected_key_values 来自同仓 pristine 基线（论文宣称的期望结果），供 compare_numbers 比对；pristine 自身该字段即自身期望。工具不提供期望根因标签——根因须由你基于证据推理。"
+  },
+  "build_env": {
+   "ok": true,
+   "requirements": [],
+   "all_resolvable": true,
+   "note": "无 requirements.txt"
+  },
+  "run_repo": {
+   "ok": true,
+   "repo_path": "/root/repro-agent-bench/boundary/missing_requirements",
+   "runs": [
+    {
+     "run": 1,
+     "exit_code": 0,
+     "timeout": false,
+     "elapsed_ms": 108,
+     "stdout_head": "peak = 0.8415\n",
+     "stderr_head": "",
+     "key_values": {
+      "peak": "0.8415"
+     }
+    },
+    {
+     "run": 2,
+     "exit_code": 0,
+     "timeout": false,
+     "elapsed_ms": 58,
+     "stdout_head": "peak = 0.8415\n",
+     "stderr_head": "",
+     "key_values": {
+      "peak": "0.8415"
+     }
+    }
+   ],
+   "consistent": true,
+   "note": "consistent=False 表示两次运行结果/退出码不一致（随机性信号）"
+  },
+  "diagnose_missing_evidence": {
+   "ok": false,
+   "root_cause": "未知",
+   "confidence": 0.0,
+   "reported_as_unknown": true,
+   "error": "证据不完整，缺少: build_env, run, compare",
+   "fix_suggestion": "请依次补齐 build_env / run / compare 三类证据后再调用 diagnose；证据缺失时不得判定为『可复现』。",
+   "evidence_points": []
+  },
+  "diagnose_clean_evidence": {
+   "ok": true,
+   "root_cause": "可复现（无缺陷）",
+   "confidence": 0.9,
+   "reported_as_unknown": false,
+   "fix_suggestion": "无需修复；建议保留本次观测作为基线",
+   "evidence_points": [
+    "环境可解析、运行一致且成功、数值在容差内"
+   ]
+  }
+ },
+ {
+  "case": "missing_entry",
+  "path": "/root/repro-agent-bench/boundary/missing_entry",
+  "inspect_repo": {
+   "ok": true,
+   "repo_path": "/root/repro-agent-bench/boundary/missing_entry",
+   "files": [
+    "requirements.txt"
+   ],
+   "entry": null,
+   "requirements": [
+    {
+     "spec": "numpy>=1.24",
+     "package": "numpy",
+     "op": ">=",
+     "version": "1.24"
+    }
+   ],
+   "target_outputs": [],
+   "in_bench": false,
+   "bench_info": null,
+   "expected_key_values": null,
+   "note": "expected_key_values 来自同仓 pristine 基线（论文宣称的期望结果），供 compare_numbers 比对；pristine 自身该字段即自身期望。工具不提供期望根因标签——根因须由你基于证据推理。"
+  },
+  "build_env": {
+   "ok": true,
+   "repo_path": "/root/repro-agent-bench/boundary/missing_entry",
+   "requirements": [
+    {
+     "spec": "numpy>=1.24",
+     "package": "numpy",
+     "status": "ok",
+     "installed": "2.3.5",
+     "detail": "numpy 2.3.5 满足 numpy>=1.24"
+    }
+   ],
+   "all_resolvable": true
+  },
+  "run_repo": {
+   "ok": false,
+   "error": "未找到 main.py"
+  },
+  "diagnose_missing_evidence": {
+   "ok": false,
+   "root_cause": "未知",
+   "confidence": 0.0,
+   "reported_as_unknown": true,
+   "error": "证据不完整，缺少: build_env, run, compare",
+   "fix_suggestion": "请依次补齐 build_env / run / compare 三类证据后再调用 diagnose；证据缺失时不得判定为『可复现』。",
+   "evidence_points": []
+  },
+  "diagnose_clean_evidence": {
+   "ok": true,
+   "root_cause": "可复现（无缺陷）",
+   "confidence": 0.9,
+   "reported_as_unknown": false,
+   "fix_suggestion": "无需修复；建议保留本次观测作为基线",
+   "evidence_points": [
+    "环境可解析、运行一致且成功、数值在容差内"
+   ]
+  }
+ }
+]

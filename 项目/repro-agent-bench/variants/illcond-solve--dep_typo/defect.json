@@ -1,0 +1,8 @@
+{
+  "repo": "illcond-solve",
+  "defect": "dep_typo",
+  "root_cause": "依赖版本问题",
+  "explain": "requirements 中写入不存在的版本，环境构建必然失败",
+  "expected_observation": "依赖解析/安装阶段直接失败",
+  "reproducible": false
+}

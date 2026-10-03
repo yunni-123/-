@@ -1,0 +1,7 @@
+{
+  "repo": "sinusoid-fit",
+  "defect": "pristine",
+  "root_cause": "无缺陷（对照组）",
+  "explain": "完好仓库，应当判定为可复现",
+  "reproducible": true
+}

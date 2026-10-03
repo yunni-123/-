@@ -1,0 +1,8 @@
+{
+  "repo": "sinusoid-fit",
+  "defect": "silent_truncation",
+  "root_cause": "静默截断",
+  "explain": "对数组做了静默切片截断，形状仍然合法但数值错误（不报错）",
+  "expected_observation": "输出数值与基线偏离，但不抛异常",
+  "reproducible": false
+}

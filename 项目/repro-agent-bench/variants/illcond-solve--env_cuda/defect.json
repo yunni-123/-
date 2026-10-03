@@ -1,0 +1,8 @@
+{
+  "repo": "illcond-solve",
+  "defect": "env_cuda",
+  "root_cause": "环境不匹配",
+  "explain": "声明依赖 CUDA/GPU，但环境无 GPU，运行期报错",
+  "expected_observation": "运行时报 CUDA/GPU 相关错误",
+  "reproducible": false
+}

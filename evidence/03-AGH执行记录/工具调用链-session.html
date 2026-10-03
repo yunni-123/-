@@ -1,0 +1,321 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>agnes:local:local-dev:cli:workspace:decaff41923f8b8e</title><style>:root{color-scheme:light dark}body{font:14px/1.5 system-ui,sans-serif;max-width:52rem;margin:2rem auto;padding:0 1rem;color:#1c211e;background:#fff}.meta,.minor{color:#69707a;font-size:12px}.meta{border-bottom:1px solid #d6dbd5;margin-bottom:1rem;padding-bottom:.5rem}.node{margin:.7rem 0}.user{background:#f3f5f4;border-radius:6px;padding:.6rem}.assistant{padding:.6rem}.tool{border:1px solid #d6dbd5;border-radius:6px;padding:.4rem .6rem;color:#4d555f}.approval{border-left:3px solid #0e6b54;padding:.4rem .6rem}.content{white-space:pre-wrap;overflow-wrap:anywhere;margin:0}.label{font-weight:600}.attachment{display:block}.compaction{text-align:center}@media(prefers-color-scheme:dark){body{color:#e7ece8;background:#151816}.user{background:#242925}.tool{border-color:#454c47;color:#c5ccc7}.meta,.minor{color:#abb3ad}}</style></head><body><header class="meta">agnes:local:local-dev:cli:workspace:decaff41923f8b8e · 2026-10-02T03:20:23.652Z · redacted · 32 items</header><main><section class="node user"><div class="label">User · local</div><div class="content">请用一句话介绍你自己</div></section>
+<section class="node minor">Context breakdown · 4 sections · 1160 tokens (estimated)</section>
+<section class="node assistant"><div class="label">Assistant</div><div class="content">我是 Agnes-3.0-flash，一款由 Sapiens AI 开发的通用 AI 助手。</div></section>
+<section class="node minor">$0.000 (estimated) · inference</section>
+<section class="node minor">$0.000 (estimated) · title</section>
+<section class="node user"><div class="label">User · local</div><div class="content">请只读取当前项目，说明主要目录及用途；不要修改文件或运行安装命令</div></section>
+<section class="node minor">Context breakdown · 4 sections · 1160 tokens (estimated)</section>
+<section class="node assistant"><div class="label">Assistant</div><div class="content"></div></section>
+<details class="node tool"><summary>ls · completed</summary><div class="content">ls
+{&quot;path&quot;:&quot;~/agnes-harness&quot;}
+.gitattributes
+.github/
+.gitignore
+.npmrc
+AGENTS.md
+CLAUDE.md
+CONTRIBUTING.md
+LICENSE
+NOTICE
+README.en.md
+README.md
+README.zh-CN.md
+SECURITY.md
+biome.json
+docs/
+examples/
+node_modules/
+package.json
+packages/
+patches/
+pnpm-lock.yaml
+pnpm-workspace.yaml
+start-local-windows.ps1
+third-party/
+tools/
+tsconfig.base.json
+tsconfig.config.json
+tsconfig.json
+vitest.config.ts
+vitest.shared.ts
+[1 entries not listed: denied by policy]</div></details>
+<section class="node minor">$0.000 (estimated) · inference</section>
+<section class="node minor">Context breakdown · 4 sections · 1160 tokens (estimated)</section>
+<section class="node assistant"><div class="label">Assistant</div><div class="content">
+
+
+
+
+
+
+</div></section>
+<details class="node tool"><summary>ls · completed</summary><div class="content">ls
+{&quot;path&quot;:&quot;&lt;workspace&gt;/docs&quot;}
+README.md
+README.zh-CN.md
+develop/
+guide/
+maintainers/
+reference/</div></details>
+<details class="node tool"><summary>ls · completed</summary><div class="content">ls
+{&quot;path&quot;:&quot;&lt;workspace&gt;/examples&quot;}
+packages/
+third-party-plugin/</div></details>
+<details class="node tool"><summary>ls · completed</summary><div class="content">ls
+{&quot;path&quot;:&quot;&lt;workspace&gt;/packages&quot;}
+ai/
+base/
+bridges/
+channels/
+cli/
+cli-launch/
+cli-tui/
+code/
+cordis/
+cordis-loader/
+core/
+cosmokit/
+daemon/
+error-sanitization/
+extension-api/
+host/
+mcp-transport-health/
+package-admin-client-node/
+package-isolation/
+package-manager/
+plugin-runtime/
+protocol/
+protocol-validation/
+resource-control-cli/
+resource-control-client-node/
+resource-control-contracts/
+resource-control-daemon/
+resource-control-runtime/
+resource-control-store/
+resource-control-web/
+resource-control-worker/
+runtime-python/
+sandbox-remote/
+sdk/
+system-node/
+web/
+web-admin-frame/
+web-client/
+web-server/
+web-slots/
+web-ui/
+web-units/
+worker-runtime/</div></details>
+<details class="node tool"><summary>ls · completed</summary><div class="content">ls
+{&quot;path&quot;:&quot;&lt;workspace&gt;/patches&quot;}
+README.md
+[REDACTED:email]</div></details>
+<details class="node tool"><summary>ls · completed</summary><div class="content">ls
+{&quot;path&quot;:&quot;&lt;workspace&gt;/third-party&quot;}
+README.md
+build-dependencies.json
+runtime-dependencies.json</div></details>
+<details class="node tool"><summary>ls · completed</summary><div class="content">ls
+{&quot;path&quot;:&quot;&lt;workspace&gt;/tools&quot;}
+acceptance/
+bench-cu-artifact-gc.ts
+bench-ledger-integrity.ts
+bench-ledger-scan.ts
+bench-ledger-write.ts
+bench-op-state.ts
+ci/
+guards/
+public-docs/
+smoke.sh
+test-fixtures/
+test-start-local-windows.ps1
+third-party-notices.d.mts
+third-party-notices.mjs</div></details>
+<details class="node tool"><summary>read · completed</summary><div class="content">read
+{&quot;limit&quot;:40,&quot;path&quot;:&quot;&lt;workspace&gt;/package.json&quot;}
+1	{
+2	  &quot;name&quot;: &quot;agnes-harness&quot;,
+3	  &quot;private&quot;: true,
+4	  &quot;type&quot;: &quot;module&quot;,
+5	  &quot;packageManager&quot;: &quot;pnpm@10.34.5&quot;,
+6	  &quot;engines&quot;: {
+7	    &quot;node&quot;: &quot;&gt;=24.10&quot;
+8	  },
+9	  &quot;scripts&quot;: {
+10	    &quot;test&quot;: &quot;vitest run --project fast --maxWorkers=1&quot;,
+11	    &quot;test:heavy&quot;: &quot;vitest run --project heavy --maxWorkers=1&quot;,
+12	    &quot;test:all&quot;: &quot;vitest run --maxWorkers=1&quot;,
+13	    &quot;typecheck&quot;: &quot;tsc -b&quot;,
+14	    &quot;lint&quot;: &quot;biome check .&quot;,
+15	    &quot;gen:check&quot;: &quot;pnpm -r --if-present run gen:check&quot;,
+16	    &quot;bench:cu-artifact-gc&quot;: &quot;tsx tools/bench-cu-artifact-gc.ts&quot;,
+17	    &quot;bench:ledger-integrity&quot;: &quot;tsx tools/bench-ledger-integrity.ts&quot;,
+18	    &quot;bench:ledger-scan&quot;: &quot;tsx tools/bench-ledger-scan.ts&quot;,
+19	    &quot;bench:ledger-write&quot;: &quot;tsx tools/bench-ledger-write.ts&quot;
+20	  },
+21	  &quot;devDependencies&quot;: {
+22	    &quot;@biomejs/biome&quot;: &quot;2.5.12&quot;,
+23	    &quot;@types/node&quot;: &quot;26.4.1&quot;,
+24	    &quot;happy-dom&quot;: &quot;20.14.3&quot;,
+25	    &quot;tsx&quot;: &quot;4.23.13&quot;,
+26	    &quot;typescript&quot;: &quot;7.0.2&quot;,
+27	    &quot;vitest&quot;: &quot;5.0.0&quot;
+28	  },
+29	  &quot;license&quot;: &quot;Apache-2.0&quot;
+30	}</div></details>
+<details class="node tool"><summary>read · completed</summary><div class="content">read
+{&quot;path&quot;:&quot;&lt;workspace&gt;/AGENTS.md&quot;}
+1	# Working on Agnes Harness
+2	
+3	Read [README.md](README.md), the [documentation](docs/README.md), and the relevant module before making changes. Development pull requests are currently limited to invited internal collaborators; see [CONTRIBUTING.md](CONTRIBUTING.md).
+4	
+5	## Repository map
+6	
+7	- `packages/`: protocol, Core, Host, daemon, clients, extensions and supporting libraries.
+8	- `examples/`: runnable plugin examples and explicit test fixtures.
+9	- `docs/`: user guides, extension tutorials, architecture and maintenance policies.
+10	- `tools/`: generation, acceptance checks, documentation verification and repository guards.
+11	- `third-party/`: dependency provenance; root `NOTICE` and package-local licenses cover attribution.
+12	
+13	Use the [source map](docs/develop/source-map.md) to locate the owning module. Preserve package boundaries and consume declared exports. Protocol schemas and generators own generated types and reference documents.
+14	
+15	## Workflow
+16	
+17	1. Inspect Git status, the configured remotes and recent changes. Preserve other contributors&#39; work; integrate remote changes without rewriting shared history.
+18	2. For changes to public APIs, architecture, storage or security boundaries, describe the design and compatibility impact before implementation.
+19	3. Keep changes focused. Update the affected guides, contracts and meaningful tests in the same change.
+20	4. Run checks appropriate to the affected behavior. Report the commands, results, failures and untested environments accurately.
+21	5. Review the final diff before committing. Commit, push and publish only within the user&#39;s or maintainer&#39;s authorization.
+22	
+23	## Build and checks
+24	
+25	Use the Node.js requirement and pinned pnpm version in `package.json`. From the repository root:
+26	
+27	```sh
+28	pnpm install --frozen-lockfile
+29	pnpm --filter @agnes/host build:native
+30	pnpm --filter @agnes/system-node build:native
+31	pnpm typecheck
+32	pnpm lint
+33	pnpm gen:check
+34	node tools/public-docs/verify.mjs
+35	pnpm exec vitest run tools/guards/src --maxWorkers=1
+36	```
+37	
+38	Run affected package tests from the repository root. `pnpm test` runs the fast tier, `pnpm test:heavy` runs the real-process and large-data tests (`*.e2e.test.ts`, `*.slow.test.ts`), and `pnpm test:all` runs both. Run a single file of either tier with `pnpm exec vitest run &lt;file&gt;`. A focused test command must actually execute matching tests. For a complete local runtime, follow the [installation guide](docs/guide/install.md).
+39	
+40	## Tests
+41	
+42	Keep the suite growing only where behavior grows.
+43	
+44	- Prefer extending an existing test over adding a new one. For a bug fix, add the failing case to the nearest existing test (a new row in a parameterized table, or a stronger assertion) so it fails before the fix and passes after it. Add a new test or test file only for behavior no existing test covers.
+45	- Test observable behavior at the module&#39;s contract: inputs, outputs, persisted state, emitted events and errors. Do not pin internal call counts, private helpers, incidental ordering or exact byte layouts unless that layout is itself the contract, such as a wire format, a prompt prefix or the ledger.
+46	- Delete tests together with the code they cover. When a change makes a test redundant because its assertions are covered elsewhere, remove or merge it in the same change and name the covering test in the commit message.
+47	- Choose the tier by file name. A test that starts real daemon, worker or CLI processes is `*.e2e.test.ts`; one that builds large ledgers or waits on real timers is `*.slow.test.ts`. Both run in the heavy tier; every other test file runs in the fast tier.
+48	
+49	## Engineering boundaries
+50	
+51	- Keep session facts and authorization decisions in their owning backend modules; clients render and request operations through supported interfaces.
+52	- Maintain fail-closed behavior, lifecycle cleanup, cancellation and recovery semantics. Test refusal and failure paths when changing them.
+53	- External UI libraries belong in `packages/web-ui`; other packages</div></details>
+<section class="node minor">$0.000 (estimated) · inference</section>
+<section class="node minor">Context breakdown · 4 sections · 1160 tokens (estimated)</section>
+<section class="node assistant"><div class="label">Assistant</div><div class="content">
+
+
+</div></section>
+<details class="node tool"><summary>ls · completed</summary><div class="content">ls
+{&quot;path&quot;:&quot;&lt;workspace&gt;/docs/guide&quot;}
+build-recovery.md
+build-recovery.zh-CN.md
+cli.md
+cli.zh-CN.md
+demo.md
+demo.zh-CN.md
+install.md
+install.zh-CN.md
+mcp.md
+mcp.zh-CN.md
+mhs.md
+mhs.zh-CN.md
+packages.md
+packages.zh-CN.md
+quickstart.md
+quickstart.zh-CN.md
+security.md
+security.zh-CN.md
+sessions.md
+sessions.zh-CN.md
+skills.md
+skills.zh-CN.md
+troubleshooting.md
+troubleshooting.zh-CN.md
+web.md
+web.zh-CN.md
+why-agh.md
+why-agh.zh-CN.md</div></details>
+<details class="node tool"><summary>ls · completed</summary><div class="content">ls
+{&quot;path&quot;:&quot;&lt;workspace&gt;/docs/develop&quot;}
+architecture.md
+architecture.zh-CN.md
+backend.md
+backend.zh-CN.md
+contributing.md
+contributing.zh-CN.md
+frontend.md
+frontend.zh-CN.md
+fullstack.md
+fullstack.zh-CN.md
+plugins.md
+plugins.zh-CN.md
+skins.md
+skins.zh-CN.md
+source-map.md
+source-map.zh-CN.md</div></details>
+<details class="node tool"><summary>ls · completed</summary><div class="content">ls
+{&quot;path&quot;:&quot;&lt;workspace&gt;/docs/reference&quot;}
+api.md
+api.zh-CN.md
+capabilities.md
+capabilities.zh-CN.md
+cli.md
+cli.zh-CN.md
+configuration.md
+configuration.zh-CN.md
+limitations.md
+limitations.zh-CN.md</div></details>
+<details class="node tool"><summary>ls · completed</summary><div class="content">ls
+{&quot;path&quot;:&quot;&lt;workspace&gt;/docs/maintainers&quot;}
+maintenance.md
+maintenance.zh-CN.md
+provenance.md
+provenance.zh-CN.md
+release.md
+release.zh-CN.md
+verification.md
+verification.zh-CN.md
+versioning.md
+versioning.zh-CN.md</div></details>
+<section class="node minor">$0.000 (estimated) · inference</section>
+<section class="node minor">Context breakdown · 4 sections · 1160 tokens (estimated)</section>
+<section class="node assistant"><div class="label">Assistant</div><div class="content">这是一个**基于 pnpm 工作区的 TypeScript monorepo**，当前目录下的主要组成与用途如下：
+
+## 主要目录
+
+- **`packages/`** — 核心代码包（monorepo 主体），包括 `ai`、`base`、`bridges`、`channels`、`cli`、`cli-tui`、`code`、`core`、`daemon`、`extension-api`、`host`、`mcp-transport-health`、`plugin-runtime`、`protocol`、`resource-control-*`、`sdk`、`web`、`web-ui`、`worker-runtime` 等。
+- **`examples/`** — 可运行的插件示例与测试夹具。
+- **`docs/`** — 用户指南（guide）、开发文档（develop）、API 参考（reference）和面向维护者的文档（maintainers），中英文成对存放。
+- **`tools/`** — 仓库级工具脚本：性能基准测试（`bench-*.ts`）、CI 检查、公共文档校验、第三方声明生成等。
+- **`third-party/`** — 依赖来源（provenance）与第三方许可/声明文件。
+- **`patches/`** — pnpm 补丁（含 `jiti@2.7.0` 补丁）。
+- **`node_modules/`** — 已安装的依赖（未列出，因策略限制不展开）。
+
+## 根目录其他文件
+
+- `package.json` — 工作区配置，使用 pnpm 10.34.5，要求 Node ≥ 24.10。
+- `pnpm-workspace.yaml` — pnpm 工作区定义。
+- `tsconfig.*.json` — TypeScript 配置。
+- `biome.json` / `vitest.*.ts` — 代码检查与测试配置。
+- `AGENTS.md` / `CLAUDE.md` / `CONTRIBUTING.md` — 贡献者/开发者指南。
+- `NOTICE` / `LICENSE` / `SECURITY.md` — 许可与安全声明。</div></section>
+<section class="node minor">$0.000 (estimated) · inference</section></main></body></html>

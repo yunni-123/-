@@ -1,0 +1,13 @@
+{
+ "eval": "eval_19",
+ "variant": "units-pipeline--unit_confusion",
+ "reproducible": false,
+ "root_cause": "未知（无根因能力）",
+ "confidence": null,
+ "elapsed_s": 0.1,
+ "raw": {
+  "exit_code": 1,
+  "stdout_tail": "distance_m = 1.2\nfrequency_hz = 2.400e+09\npath_loss_db = 41.64\nreceived_power_dbm = -11.64\n",
+  "stderr_tail": "Traceback (most recent call last):\n  File \"/root/repro-agent-bench/eval/eval_19/main.py\", line 64, in <module>\n    main()\n    ~~~~^^\n  File \"/root/repro-agent-bench/eval/eval_19/main.py\", line 58, in main\n    assert 100.0 < distance_m < 1e6, \"distance out of plausible range (unit error?)\"\n           ^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: distance out of plausible range (unit error?)\n"
+ }
+}

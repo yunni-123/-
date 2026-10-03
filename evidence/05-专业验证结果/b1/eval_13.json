@@ -1,0 +1,13 @@
+{
+ "eval": "eval_13",
+ "variant": "sinusoid-fit--no_seed",
+ "reproducible": true,
+ "root_cause": "未知（无根因能力）",
+ "confidence": null,
+ "elapsed_s": 0.1,
+ "raw": {
+  "exit_code": 0,
+  "stdout_tail": "amplitude = 3.0018\nfrequency = 2.5000\nOK: sinusoid-fit reproduced\n",
+  "stderr_tail": ""
+ }
+}

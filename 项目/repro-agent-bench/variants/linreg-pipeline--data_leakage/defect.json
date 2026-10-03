@@ -1,0 +1,8 @@
+{
+  "repo": "linreg-pipeline",
+  "defect": "data_leakage",
+  "root_cause": "数据泄漏（目标泄漏特征）",
+  "explain": "构造了一个与目标强相关的'本不该有'的特征，并在全量数据（含测试集）上做特征选择，该特征把测试集信息带进模型，test_r2 被抬到不合理的水平",
+  "expected_observation": "test_r2 超出合理性上界（>0.90），触发断言",
+  "reproducible": false
+}

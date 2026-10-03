@@ -1,0 +1,20 @@
+﻿variant,repo,defect,expected_root_cause,expected_reproducible,exit_code,deterministic,key_outputs,stderr_head
+illcond-solve--dep_typo,illcond-solve,dep_typo,依赖版本问题,False,0,True,"{""cond(A)"": ""1.526e+10"", ""relative_residual"": ""1.071e-16"", ""solution_error"": ""2.256e-07""}",
+illcond-solve--env_cuda,illcond-solve,env_cuda,环境不匹配,False,1,True,{},RuntimeError: CUDA/GPU backend is required but not available: No module named 'cupy'
+illcond-solve--numerical_instability,illcond-solve,numerical_instability,数值不稳定,False,1,True,"{""cond(A)"": ""1.526e+10"", ""relative_residual"": ""8.228e-10"", ""solution_error"": ""1.194e+00""}",AssertionError: relative residual too large: numerical instability
+illcond-solve--pristine,illcond-solve,pristine,无缺陷（对照组）,True,0,True,"{""cond(A)"": ""1.526e+10"", ""relative_residual"": ""1.071e-16"", ""solution_error"": ""2.256e-07""}",
+illcond-solve--silent_truncation,illcond-solve,silent_truncation,静默截断,False,1,True,{},AssertionError: matrix was silently truncated
+linreg-pipeline--data_leakage,linreg-pipeline,data_leakage,数据泄漏（目标泄漏特征）,False,1,True,"{""selected"": ""19,0,1,3,2,9"", ""test_r2"": ""0.9995""}",AssertionError: suspiciously high R2 (possible data leakage)
+linreg-pipeline--dep_typo,linreg-pipeline,dep_typo,依赖版本问题,False,0,True,"{""selected"": ""0,1,3,2,17,8"", ""test_r2"": ""0.8697""}",
+linreg-pipeline--env_cuda,linreg-pipeline,env_cuda,环境不匹配,False,1,True,{},RuntimeError: CUDA/GPU backend is required but not available: No module named 'cupy'
+linreg-pipeline--no_seed,linreg-pipeline,no_seed,随机性未固定,False,1,False,"{""selected"": ""0,1,3,2,6,5"", ""test_r2"": ""0.9148""}",AssertionError: suspiciously high R2 (possible data leakage)
+linreg-pipeline--pristine,linreg-pipeline,pristine,无缺陷（对照组）,True,0,True,"{""selected"": ""0,1,3,2,17,8"", ""test_r2"": ""0.8697""}",
+sinusoid-fit--dep_typo,sinusoid-fit,dep_typo,依赖版本问题,False,0,True,"{""amplitude"": ""2.9799"", ""frequency"": ""2.5000""}",
+sinusoid-fit--env_cuda,sinusoid-fit,env_cuda,环境不匹配,False,1,True,{},RuntimeError: CUDA/GPU backend is required but not available: No module named 'cupy'
+sinusoid-fit--no_seed,sinusoid-fit,no_seed,随机性未固定,False,0,False,"{""amplitude"": ""3.0056"", ""frequency"": ""2.5000""}",
+sinusoid-fit--pristine,sinusoid-fit,pristine,无缺陷（对照组）,True,0,True,"{""amplitude"": ""2.9799"", ""frequency"": ""2.5000""}",
+sinusoid-fit--silent_truncation,sinusoid-fit,silent_truncation,静默截断,False,0,True,"{""amplitude"": ""2.9964"", ""frequency"": ""2.4990""}",
+units-pipeline--dep_typo,units-pipeline,dep_typo,依赖版本问题,False,0,True,"{""distance_m"": ""1200.0"", ""frequency_hz"": ""2.400e+09"", ""path_loss_db"": ""101.64"", ""received_power_dbm"": ""-71.64""}",
+units-pipeline--env_cuda,units-pipeline,env_cuda,环境不匹配,False,1,True,{},RuntimeError: CUDA/GPU backend is required but not available: No module named 'cupy'
+units-pipeline--pristine,units-pipeline,pristine,无缺陷（对照组）,True,0,True,"{""distance_m"": ""1200.0"", ""frequency_hz"": ""2.400e+09"", ""path_loss_db"": ""101.64"", ""received_power_dbm"": ""-71.64""}",
+units-pipeline--unit_confusion,units-pipeline,unit_confusion,单位换算错误,False,1,True,"{""distance_m"": ""1.2"", ""frequency_hz"": ""2.400e+09"", ""path_loss_db"": ""41.64"", ""received_power_dbm"": ""-11.64""}",AssertionError: distance out of plausible range (unit error?)

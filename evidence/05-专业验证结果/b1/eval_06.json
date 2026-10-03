@@ -1,0 +1,13 @@
+{
+ "eval": "eval_06",
+ "variant": "linreg-pipeline--data_leakage",
+ "reproducible": false,
+ "root_cause": "未知（无根因能力）",
+ "confidence": null,
+ "elapsed_s": 0.1,
+ "raw": {
+  "exit_code": 1,
+  "stdout_tail": "selected = 19,0,1,3,2,9\ntest_r2 = 0.9995\n",
+  "stderr_tail": "Traceback (most recent call last):\n  File \"/root/repro-agent-bench/eval/eval_06/main.py\", line 97, in <module>\n    main()\n    ~~~~^^\n  File \"/root/repro-agent-bench/eval/eval_06/main.py\", line 90, in main\n    assert score < 0.90, \"suspiciously high R2 (possible data leakage)\"\n           ^^^^^^^^^^^^\nAssertionError: suspiciously high R2 (possible data leakage)\n"
+ }
+}

@@ -1,0 +1,13 @@
+{
+ "eval": "eval_16",
+ "variant": "units-pipeline--dep_typo",
+ "reproducible": true,
+ "root_cause": "未知（无根因能力）",
+ "confidence": null,
+ "elapsed_s": 0.0,
+ "raw": {
+  "exit_code": 0,
+  "stdout_tail": "distance_m = 1200.0\nfrequency_hz = 2.400e+09\npath_loss_db = 101.64\nreceived_power_dbm = -71.64\nOK: units-pipeline reproduced\n",
+  "stderr_tail": ""
+ }
+}

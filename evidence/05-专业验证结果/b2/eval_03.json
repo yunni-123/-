@@ -1,0 +1,11 @@
+{
+ "eval": "eval_03",
+ "variant": "illcond-solve--numerical_instability",
+ "root_cause": "数值不稳定",
+ "reproducible": false,
+ "confidence": 0.95,
+ "reason": "Hilbert矩阵条件数高达1e10，使用直接求解导致相对残差8.2e-10远超断言要求的1e-12，触发数值不稳定断言错误。",
+ "elapsed_s": 1.4,
+ "parse_error": false,
+ "error": null
+}

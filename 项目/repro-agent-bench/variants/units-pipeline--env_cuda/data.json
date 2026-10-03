@@ -1,0 +1,5 @@
+{
+  "tx_power_dbm": 30.0,
+  "distance": { "value": 1.2, "unit": "km" },
+  "frequency": { "value": 2.4, "unit": "GHz" }
+}

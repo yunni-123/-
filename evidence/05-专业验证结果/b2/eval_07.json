@@ -1,0 +1,11 @@
+{
+ "eval": "eval_07",
+ "variant": "linreg-pipeline--dep_typo",
+ "root_cause": "可复现（无缺陷）",
+ "reproducible": true,
+ "confidence": 0.9,
+ "reason": "代码逻辑正确，随机数种子固定且特征选择与标准化仅使用训练集统计量，避免了数据泄漏，导致运行结果稳定可复现。",
+ "elapsed_s": 1.5,
+ "parse_error": false,
+ "error": null
+}

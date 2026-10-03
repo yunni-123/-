@@ -1,0 +1,11 @@
+{
+ "eval": "eval_11",
+ "variant": "sinusoid-fit--dep_typo",
+ "root_cause": "可复现（无缺陷）",
+ "reproducible": true,
+ "confidence": 0.95,
+ "reason": "虽然依赖文件中有无效包，但代码使用固定随机种子，拟合结果满足断言阈值，运行结果与期望一致且可复现。",
+ "elapsed_s": 1.7,
+ "parse_error": false,
+ "error": null
+}

@@ -1,0 +1,13 @@
+{
+ "eval": "eval_07",
+ "variant": "linreg-pipeline--dep_typo",
+ "reproducible": true,
+ "root_cause": "未知（无根因能力）",
+ "confidence": null,
+ "elapsed_s": 0.1,
+ "raw": {
+  "exit_code": 0,
+  "stdout_tail": "selected = 0,1,3,2,17,8\ntest_r2 = 0.8697\nOK: linreg-pipeline reproduced\n",
+  "stderr_tail": ""
+ }
+}

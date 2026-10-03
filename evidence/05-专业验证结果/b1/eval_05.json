@@ -1,0 +1,13 @@
+{
+ "eval": "eval_05",
+ "variant": "illcond-solve--silent_truncation",
+ "reproducible": false,
+ "root_cause": "未知（无根因能力）",
+ "confidence": null,
+ "elapsed_s": 0.1,
+ "raw": {
+  "exit_code": 1,
+  "stdout_tail": "",
+  "stderr_tail": "Traceback (most recent call last):\n  File \"/root/repro-agent-bench/eval/eval_05/main.py\", line 52, in <module>\n    main()\n    ~~~~^^\n  File \"/root/repro-agent-bench/eval/eval_05/main.py\", line 35, in main\n    A, idx = build_matrix()          # idx 是列索引，用于构造真解\n             ~~~~~~~~~~~~^^\n  File \"/root/repro-agent-bench/eval/eval_05/main.py\", line 21, in build_matrix\n    assert A.shape == (N, N), \"matrix was silently truncated\"\n           ^^^^^^^^^^^^^^^^^\nAssertionError: matrix was silently truncated\n"
+ }
+}

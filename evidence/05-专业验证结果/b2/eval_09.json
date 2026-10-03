@@ -1,0 +1,11 @@
+{
+ "eval": "eval_09",
+ "variant": "linreg-pipeline--no_seed",
+ "root_cause": "可复现（无缺陷）",
+ "reproducible": true,
+ "confidence": 1.0,
+ "reason": "脚本使用固定种子和确定性划分，流程严格遵循“先划分、后训练集内选特征/标准化”的正确顺序，未发生目标泄漏，结果落在预期的断言区间内。",
+ "elapsed_s": 1.4,
+ "parse_error": false,
+ "error": null
+}

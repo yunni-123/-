@@ -1,0 +1,13 @@
+{
+ "eval": "eval_17",
+ "variant": "units-pipeline--env_cuda",
+ "reproducible": false,
+ "root_cause": "未知（无根因能力）",
+ "confidence": null,
+ "elapsed_s": 0.1,
+ "raw": {
+  "exit_code": 1,
+  "stdout_tail": "",
+  "stderr_tail": "Traceback (most recent call last):\n  File \"/root/repro-agent-bench/eval/eval_17/main.py\", line 4, in <module>\n    import cupy as cp          # [ENV] 需要 GPU/CUDA\n    ^^^^^^^^^^^^^^^^^\nModuleNotFoundError: No module named 'cupy'\n\nThe above exception was the direct cause of the following exception:\n\nTraceback (most recent call last):\n  File \"/root/repro-agent-bench/eval/eval_17/main.py\", line 7, in <module>\n    raise RuntimeError(\n        \"CUDA/GPU backend is required but not available: %s\" % exc\n    ) from exc\nRuntimeError: CUDA/GPU backend is required but not available: No module named 'cupy'\n"
+ }
+}

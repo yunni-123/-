@@ -1,0 +1,11 @@
+{
+ "eval": "eval_14",
+ "variant": "sinusoid-fit--pristine",
+ "root_cause": "可复现（无缺陷）",
+ "reproducible": true,
+ "confidence": 0.95,
+ "reason": "代码使用了固定随机种数的生成器，且算法确定性高，运行结果与期望范围一致。",
+ "elapsed_s": 2.1,
+ "parse_error": false,
+ "error": null
+}

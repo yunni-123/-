@@ -1,0 +1,11 @@
+{
+ "eval": "eval_15",
+ "variant": "sinusoid-fit--silent_truncation",
+ "root_cause": "可复现（无缺陷）",
+ "reproducible": true,
+ "confidence": 0.95,
+ "reason": "代码使用固定随机种子生成数据，且计算过程为确定性数值优化，输出在预期误差范围内，符合可复现标准。",
+ "elapsed_s": 1.8,
+ "parse_error": false,
+ "error": null
+}

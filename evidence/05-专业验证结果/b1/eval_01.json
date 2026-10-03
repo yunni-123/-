@@ -1,0 +1,13 @@
+{
+ "eval": "eval_01",
+ "variant": "illcond-solve--dep_typo",
+ "reproducible": true,
+ "root_cause": "未知（无根因能力）",
+ "confidence": null,
+ "elapsed_s": 0.0,
+ "raw": {
+  "exit_code": 0,
+  "stdout_tail": "cond(A) = 1.526e+10\nrelative_residual = 1.071e-16\nsolution_error = 2.256e-07\nOK: illcond-solve reproduced\n",
+  "stderr_tail": ""
+ }
+}

@@ -1,0 +1,11 @@
+{
+ "eval": "eval_04",
+ "variant": "illcond-solve--pristine",
+ "root_cause": "可复现（无缺陷）",
+ "reproducible": true,
+ "confidence": 0.95,
+ "reason": "Hilbert矩阵求解利用确定性算法，运行结果中相对残差和求解误差均在合理范围内且断言通过，结果完全可复现。",
+ "elapsed_s": 1.1,
+ "parse_error": false,
+ "error": null
+}

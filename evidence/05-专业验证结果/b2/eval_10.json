@@ -1,0 +1,11 @@
+{
+ "eval": "eval_10",
+ "variant": "linreg-pipeline--pristine",
+ "root_cause": "可复现（无缺陷）",
+ "reproducible": true,
+ "confidence": 0.95,
+ "reason": "种子固定，且特征选择和标准化均严格基于训练集统计，无数据泄漏，结果在预期范围内。",
+ "elapsed_s": 1.1,
+ "parse_error": false,
+ "error": null
+}

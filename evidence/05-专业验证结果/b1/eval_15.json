@@ -1,0 +1,13 @@
+{
+ "eval": "eval_15",
+ "variant": "sinusoid-fit--silent_truncation",
+ "reproducible": true,
+ "root_cause": "未知（无根因能力）",
+ "confidence": null,
+ "elapsed_s": 0.1,
+ "raw": {
+  "exit_code": 0,
+  "stdout_tail": "amplitude = 2.9964\nfrequency = 2.4990\nOK: sinusoid-fit reproduced\n",
+  "stderr_tail": ""
+ }
+}

@@ -1,0 +1,11 @@
+{
+ "eval": "eval_19",
+ "variant": "units-pipeline--unit_confusion",
+ "root_cause": "单位换算错误",
+ "reproducible": false,
+ "confidence": 1.0,
+ "reason": "to_meters函数忽略了unit参数，未将km换算为m，导致距离值错误，触发断言失败。",
+ "elapsed_s": 23.0,
+ "parse_error": false,
+ "error": null
+}

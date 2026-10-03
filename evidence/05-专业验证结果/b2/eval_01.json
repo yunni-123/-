@@ -1,0 +1,11 @@
+{
+ "eval": "eval_01",
+ "variant": "illcond-solve--dep_typo",
+ "root_cause": "依赖版本问题",
+ "reproducible": false,
+ "confidence": 0.9,
+ "reason": "requirements.txt包含不存在的虚拟包nonexistent-package-xyz，会导致安装失败，且numpy指定了版本可能存在其他环境差异，导致无法复现。",
+ "elapsed_s": 1.9,
+ "parse_error": false,
+ "error": null
+}

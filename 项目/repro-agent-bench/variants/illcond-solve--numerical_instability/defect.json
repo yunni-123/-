@@ -1,0 +1,8 @@
+{
+  "repo": "illcond-solve",
+  "defect": "numerical_instability",
+  "root_cause": "数值不稳定",
+  "explain": "用正规方程（A^T A）求解病态方程组，条件数被平方，残差与解误差显著变大",
+  "expected_observation": "solution_error / relative_residual 远大于基线（1e-16 -> 1e-10 量级）",
+  "reproducible": false
+}
